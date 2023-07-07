@@ -1,11 +1,13 @@
 import imaplib
 
-# Connect to the IMAP server
-imap_server = imaplib.IMAP4('sprjapan.com')
 
+host = input("host")
 username = input("username: ")
 password = input("Password: ")
 sender = input("sender: ")
+
+# Connect to the IMAP server
+imap_server = imaplib.IMAP4(host)
 # Login to the email account
 imap_server.login(username, password)
 
